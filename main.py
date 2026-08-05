@@ -15,7 +15,7 @@ import time
 colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "gray"]
 startingLocation = "Cloud Gate"
 current_location = ""
-currentCoordinates = ""
+current_coordinates = ""
 
 class Worksheet:
     def __init__(self):
@@ -185,10 +185,12 @@ def set_type(worksheet, aType):
         title = worksheet.find(aType)
         i = title.row + 4
         j = title.col
+
         # been_to_string = worksheet.find("Number Reviewed")
         # a = been_to_string.row+1
         # b = been_to_string.col
         # been_to_amt = worksheet.cell(a,b).value
+
         if aType == "ERRANDS":
             been_to_amt = worksheet.cell(i-2,j+2).value
         else: been_to_amt = worksheet.cell(i-2,j+1).value
@@ -219,13 +221,6 @@ def set_type(worksheet, aType):
     marker_index = 1
     path_index = 1
 
-    # current_location = my_entry.get()
-    # if my_entry.get() == "":
-    #     current_location = "The Bean"
-    # currentSpot = maps.geocode(current_location)
-    # latCurr = (currentSpot[0]['geometry']['location']['lat'])
-    # lngCurr = (currentSpot[0]['geometry']['location']['lng'])
-
     while i < 100:
         place_name = ""
         try: 
@@ -249,12 +244,6 @@ def set_type(worksheet, aType):
                 cell_values = cell_value.split(" $ ")
                 cell_value = cell_values[1]
                 place_name = cell_values[0]
-            # if '\n' in cell_value:
-            #     cell_split = cell_value.split('\n')
-            #     cell_value = cell_split[0] + cell_split[1]
-            # if '\n' in place_name:
-            #     place_split = place_name.split('\n')
-            #     place_name = place_split[0] + place_split[1]
 
             response_geocode = maps.geocode(cell_value)
             if (response_geocode != []):
@@ -271,9 +260,6 @@ def set_type(worksheet, aType):
                 #     messagebox.showerror("Error!", "Google Maps API failed.\nPlease try again.")
                 #     break
                 
-                
-
-                # response_geocode = maps.geocode(cell_value)
                 m = 0
                 for m in range(len(response_geocode[0]['address_components'])):
                     if response_geocode[0]['address_components'][m]['long_name'] == "Illinois" or \
@@ -283,6 +269,7 @@ def set_type(worksheet, aType):
                             break
                 lat = (response_geocode[0]['geometry']['location']['lat'])
                 lng = (response_geocode[0]['geometry']['location']['lng'])
+
                 # try: 
                     # directions_result = maps.directions((latCurr, lngCurr), (lat,lng), departure_time=now, mode="walking")
                     # req_string = directions_result[0]['legs'][0]['distance']['text']
@@ -295,19 +282,13 @@ def set_type(worksheet, aType):
                     #     big_distance = float(mode_string[0])
                     #     # mid_lat = (latCurr + lat)/2.0
                     #     # mid_lng = (lngCurr + lng)/2.0
-                # except E:
-                #     messagebox.showerror("Error!", "poopy.\nPlease try again.")
-                #     print(E)
+                # except:
+                #     messagebox.showerror("Error!", "Google API has failed.\nPlease try again.")
                 #     break
+                
                 if inChicago:
                     if k == len(colors):
                         k = 0
-                    # place_name = cell_value
-                    # if "Ave" in cell_value or "St" in cell_value or "Rd" in cell_value:
-                    #     try: place_name = worksheet.cell(i,j+1).value
-                    #     except: 
-                    #         messagebox.showerror("Error!", "Google API limit exceeded.\nPlease try again.")
-                    #         break
                     
                     if place_name == "":
                         place_name = cell_value
@@ -460,6 +441,7 @@ def print_marker(marker):
     except: 
         messagebox.showerror("Error!", "Google Maps API failed.\nPlease try again.")
         return
+
     # req_string = directions_result[0]['legs'][0]['distance']['text']
     # mode_string = req_string.split(" ")
     # mode_string = mode_string[0].split(",")
@@ -600,7 +582,7 @@ def reset_map():
     sixth_frame.pack_forget()
 
 def set_current_location_click(coordinates_tuple):
-    currentCoordinates = coordinates_tuple
+    current_coordinates = coordinates_tuple
     lookup(coordinates_tuple)
 
 window = Tk()
@@ -699,11 +681,8 @@ marker_label = {}
 directions_list = []
 directions = []
 path_list = {}
-k = 0
-
-
 things_list = []
-restaurant_list = []
+k = 0
 
 marker_1 = map_widget.set_address(startingLocation, marker=False, marker_color_outside="black")
 map_widget.set_position(start_lat,start_lng)
