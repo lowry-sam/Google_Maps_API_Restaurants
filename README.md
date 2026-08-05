@@ -22,6 +22,8 @@ In this project I utilized/learned the following:
 - `JSON`
 - `File Manipulation`
 
+To run, launch `main.exe`. *NOTE: You must have your own API Key and Credentials from Google's API Cloud services, and you must have your own Google Sheets spreadsheet.
+
 <h2 align="center">
     <img src="images/1.gif" width="400px">
     <img src="images/2.gif" width="400px">
