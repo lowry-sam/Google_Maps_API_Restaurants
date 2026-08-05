@@ -30,7 +30,6 @@ In this project I utilized/learned the following:
 
 <img src="images/1.png">
 <img src="images/3.png">
-<img src="images/5.png">
 <img src="images/6.png">
 <img src="images/8.png">
 <img src="images/11.png">
