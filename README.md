@@ -28,12 +28,11 @@ In this project I utilized/learned the following:
     <img src="images/3.gif" width="400px">
     <img src="images/4.gif" width="400px">
     <img src="images/6.gif" width="400px">
-    <img src="images/1.png" width="400px">
     <img src="images/3.png" width="400px">
     <img src="images/6.png" width="400px">
     <img src="images/8.png" width="400px">
     <img src="images/11.png" width="400px">
-    <img src="images/15.png" width="400px">
+    <img src="images/15.png" width="800px">
 </h2>
 
 *Built by Sam Lowry using Python, 2026*
