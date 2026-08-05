@@ -614,7 +614,7 @@ scopes = [
 creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
 client = gspread.authorize(creds)
 
-sheet_file = open("sheet-id.txt", "r")
+sheet_file = open("a-sheet-id.txt", "r")
 sheet_id = sheet_file.read()
 sheet = client.open_by_key(sheet_id)
 worksheet_object = Worksheet()
