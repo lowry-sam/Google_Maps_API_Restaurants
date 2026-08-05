@@ -6,7 +6,7 @@ Unfortunately, there is no direct way to convert between Google Sheets and Googl
 to visually see each location at once, without tediously typing each into a maps application.
 
 Thus, I decided to create my own Python GUI application using Tkinter and Google's REST APIs for my partner
-and I to use, which searches for each location categorized by the sheets and titles in our Google spreadsheet.
+and I to use, which searches for each location categorized by the sheets and titles in our Google spreadsheet. It will display each item from a selected category on the map and tell the user how many they have been to. Each colorful marker is selectable, and will give the user a corresponding route to that location with real-time travel metrics, whether they want to drive, walk, bike or take public transit. 
 
 This application accesses data from the spreadsheet, makes calls to Google's API tools, displays the data
 utilizing Tkinter and Tkinter Map View - which functions as a visual map GUI.
