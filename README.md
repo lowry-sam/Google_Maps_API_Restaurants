@@ -22,16 +22,20 @@ In this project I utilized/learned the following:
 - `JSON`
 - `File Manipulation`
 
-<img src="images/1.gif">
-<img src="images/2.gif">
-<img src="images/3.gif">
-<img src="images/4.gif">
-<img src="images/6.gif">
+<h2 align="center">
+    <img src="images/1.gif" width="300px">
+    <img src="images/2.gif" width="300px">
+    <img src="images/3.gif" width="300px">
+    <img src="images/4.gif" width="300px">
+    <img src="images/6.gif" width="300px">
+</h2>
+<h2 align="center">
+    <img src="images/1.png" width="300px">
+    <img src="images/3.png" width="300px">
+    <img src="images/6.png" width="300px">
+    <img src="images/8.png" width="300px">
+    <img src="images/11.png" width="300px">
+    <img src="images/15.png" width="300px">
+</h2>
 
-<img src="images/1.png">
-<img src="images/3.png">
-<img src="images/6.png">
-<img src="images/8.png">
-<img src="images/11.png">
-<img src="images/15.png">
-
+*Built by Sam Lowry using Python, 2026*
